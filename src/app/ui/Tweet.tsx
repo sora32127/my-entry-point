@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import TweetSkelton from './TweetSkelton'
+import { H2 } from './Headings'
 
 interface TwitterTimelineProps {
   username: string
@@ -21,7 +22,7 @@ export default function Tweet({ username }: TwitterTimelineProps) {
 
   return (
     <div>
-    <h1>Tweets by {username}</h1>
+    　<H2>Tweets by {username}</H2>
       <a
         className="twitter-timeline"
         data-lang="ja"

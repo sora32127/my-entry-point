@@ -2,12 +2,13 @@ import { fetchHatenaBlogData } from "../lib/data"
 import ExternalLink from "./ExternalLink";
 import Tag from "./Tag";
 import JSTDateTime from "./JSTDateTime";
+import { H2 } from "./Headings";
 
 export default async function HatenaBlog() {
     const data = await fetchHatenaBlogData()
     return (
         <div className="hatenablog-container">
-            <h1>Recent Hatena Blog Posts</h1>
+            <H2>Recent Hatena Blog Posts</H2>
             <div className="hatenablog-entries">
                 {data.map((entry) => (
                     <div key={entry.entryTitle} className="my-8">
