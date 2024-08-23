@@ -14,9 +14,6 @@ export async function fetchHatenaBlogData(): Promise<hatenaBlogData[]> {
     const hatenaBlogUserName = process.env.HATENA_BLOG_USER_NAME
     const hatenaBlogAPIKey = process.env.HATENA_BLOG_API_KEY
     const hatenaBlogBase64EncodedAuth = Buffer.from(`${hatenaBlogUserName}:${hatenaBlogAPIKey}`).toString("base64")
-    console.log(process.env)
-    console.log(hatenaBlogUserName)
-    console.log(hatenaBlogAPIKey)
 
     const response = await fetch(
         "https://blog.hatena.ne.jp/contradiction29/contradiction29.hatenablog.com/atom/entry",
@@ -49,6 +46,5 @@ export async function fetchHatenaBlogData(): Promise<hatenaBlogData[]> {
                 summary: entry.getElementsByTagName("summary")[0]?.textContent || "",
             };
         });
-    console.log(blogData)
     return blogData;
 }

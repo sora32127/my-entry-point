@@ -3,7 +3,7 @@ import ExternalLink from "./ExternalLink";
 import Tag from "./Tag";
 import JSTDateTime from "./JSTDateTime";
 
-export async function HatenaBlog() {
+export default async function HatenaBlog() {
     const data = await fetchHatenaBlogData()
     return (
         <div className="hatenablog-container">
