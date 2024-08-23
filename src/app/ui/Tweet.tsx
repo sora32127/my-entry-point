@@ -21,13 +21,13 @@ export default function Tweet({ username }: TwitterTimelineProps) {
   }, [])
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
     　<H2>Tweets by {username}</H2>
       <a
         className="twitter-timeline"
         data-lang="ja"
         data-theme="dark"
-        data-width="500"
+        data-width="375"
         data-height="800"
         href={`https://twitter.com/${username}?ref_src=twsrc%5Etfw`}
       >Tweets by {username}</a>
